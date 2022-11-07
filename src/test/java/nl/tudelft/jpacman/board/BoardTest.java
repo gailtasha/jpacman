@@ -2,9 +2,14 @@ package nl.tudelft.jpacman.board;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Testing board class.
+ *
+ * @author Tasha Settewong 
+ */
 public class BoardTest {
     @Test
-    void testInvariant(){
+    void testInvariant() {
         Square row = new BasicSquare();
         Square[][] grid = new Square[1][1];
         grid[0][0] = row;
@@ -12,7 +17,7 @@ public class BoardTest {
         assertThat(board.invariant()).isTrue();
     }
     @Test
-    void testSquareAt(){
+    void testSquareAt() {
         Square row = new BasicSquare();
         Square[][] grid = new Square[1][1];
         grid[0][0] = row;
