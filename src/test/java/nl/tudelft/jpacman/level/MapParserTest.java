@@ -44,7 +44,8 @@ public class MapParserTest {
         mapParser.parseMap(map);
         Mockito.verify(levelFactory, Mockito.times(1)).createGhost();
         Mockito.verify(boardFactory, Mockito.times(1)).createBoard(Mockito.any());
-        Mockito.verify(levelFactory, Mockito.times(1)).createLevel(Mockito.any(), Mockito.any(), Mockito.any());
+        Mockito.verify(levelFactory, Mockito.times(1))
+            .createLevel(Mockito.any(), Mockito.any(), Mockito.any());
     }
 
     /**
