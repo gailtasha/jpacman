@@ -12,7 +12,6 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
@@ -60,10 +59,9 @@ public class MapParserTest {
                 assertNotNull(levelFactory);
                 MapParser mapParser = new MapParser(levelFactory, boardFactory);
                 ArrayList<String> map = new ArrayList<>();
-                /*
-                Create a map with inconsistent size between
-                each row or contain invalid characters
-                */
+                map.add("############");
+                map.add("#P        X#");
+                map.add("############");
                 mapParser.parseMap(map);
             });
         Assertions.assertEquals("Invalid character at 10,1: X", thrown.getMessage());
